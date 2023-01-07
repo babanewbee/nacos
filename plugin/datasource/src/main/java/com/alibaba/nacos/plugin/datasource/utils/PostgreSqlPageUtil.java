@@ -14,18 +14,17 @@
  * limitations under the License.
  */
 
-package com.alibaba.nacos.plugin.datasource.constants;
+package com.alibaba.nacos.plugin.datasource.utils;
 
 /**
- * The data source name.
+ * The postgresql page util.
  *
- * @author hyx
- **/
+ * @author barbanewbee
+ */
 
-public class DataSourceConstant {
-    public static final String MYSQL = "mysql";
-    
-    public static final String DERBY = "derby";
+public class PostgreSqlPageUtil {
 
-    public static final String POSTGRESQL = "postgresql";
+    public static int getPageNo(int startRow, int pageSize) {
+        return startRow / pageSize;
+    }
 }
